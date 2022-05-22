@@ -1,66 +1,47 @@
 # databootcamp_world_weather_analysis
 
-# databootcamp_world_weather_analysis
-
-# OVERVIEW
+# Project Overview
+This project's purpose is to create a database of travel destinations and hotels to provide trip planning services for the user. The user inputs their preference of temperature, and our program will return a list of possible cities that fit that criteria as well as hotel recommendations for each city.
 
 ## Background
-Client (PlanMyTrip) requested data to recommend ideal hotels based on clients' weather preferences.
+Client (PlanMyTrip) would like to use our program to provide travelers and vactioners with a dynamic and customized experience.
 
 ## Objective
 Collect and analyze weather data across cities worldwide.
 
 ## Resources
-Python 3.7.13, Pandas DataFrame, OpenWeather API
+Python 3.7.13, OpenWeather API, Google Maps API, citipy module
 
-Use the NumPy module to generate more than 1,500 random latitudes and longitudes.
-Use the citipy module to list the nearest city to the latitudes and longitudes.
-Use the OpenWeatherMap API to request the current weather data from each unique city in your list.
-Parse the JSON data from the API request.
-Collect the following data from the JSON file and add it to a DataFrame:
-City, country, and date
-Latitude and longitude
-Maximum temperature
-Humidity
-Cloudiness
-Wind speed
+## Procedure
 
-Exploratory Analysis with Visualization
+Using the NumPy module, I generated ~1,500 random latitudes and longitudes and used the citipy module to list the nearest city to those coordinates. Then, I used the OpenWeatherMap API to request the current weather data from each unique cityon the list.
 
-Create scatter plots of the weather data for the following comparisons:
-Latitude versus temperature
-Latitude versus humidity
-Latitude versus cloudiness
-Latitude versus wind speed
-Determine the correlations for the following weather data:
-Latitude and temperature
-Latitude and humidity
-Latitude and cloudiness
-Latitude and wind speed
-Create a series of heatmaps using the Google Maps and Places API that showcases the following:
-Latitude and temperature
-Latitude and humidity
-Latitude and cloudiness
-Latitude and wind speed
+From there, I parsed the JSON data from the API request to collect the following information, which then got added to a DataFrame:
+
+- City, country, and date
+- Latitude and longitude
+- Maximum temperature
+- Humidity
+- Cloudiness
+- Wind speed
 
 
-Visualize Travel Data
+# Results
+## Analysis
 
-Create a heatmap with pop-up markers that can display information on specific cities based on a customer's travel preferences. Complete these steps:
+The analysis includes:
 
-Filter the Pandas DataFrame based on user inputs for a minimum and maximum temperature.
-Create a heatmap for the new DataFrame.
-Find a hotel from the cities' coordinates using Google's Maps and Places API, and Search Nearby feature.
-Store the name of the first hotel in the DataFrame.
-Add pop-up markers to the heatmap that display information about the city, current maximum temperature, and a hotel in the city.
+- Scatter plots of the following weather data comparions:
+  - Latitude versus temperature
+  - Latitude versus humidity
+  - Latitude versus cloudiness
+  - Latitude versus wind speed
 
+- A deeper look into the correlations between the relationships listed above using regression analysis
+- A series of heatmaps using the Google Maps and Places API that showcases the relationships above.
 
-## FINDINGS
-The correlation between the latitude and the maximum temperature is strong to very strong because the r-value is less than –0.7 for the Northern Hemisphere and greater than 0.7 for the Southern Hemisphere, as shown by the plots here. This means that as we approach the equator, 0° latitude, the temperatures become warmer. And when we are further from the equator the temperatures become cooler. Check the r-values for your plots. 
-
-
-The correlation between the latitude and percent humidity is very low because the r-value is less than 0.04 for the Northern and Southern Hemispheres for the plots shown here. This means that percent humidity is unpredictable due to changing weather patterns that can increase or decrease percent humidity. Check the r-values for your plots. 
-
-The correlation between the latitude and percent cloudiness is very low because the r-value is less than –0.09 for the Northern Hemisphere and less than –0.02 for the Southern Hemisphere for the plots shown here. This means that cloudiness is unpredictable due to changing weather patterns that can increase or decrease percent cloudiness. Check the r-values for your plots. 
-
-The correlation between the latitude and wind speed is very low because the r-value is less  than –0.07 for the Northern Hemisphere and less than –0.3 for the Southern Hemisphere for the plots shown here. This means that wind speed is unpredictable due to changing weather patterns that can increase or decrease wind speed. Check the r-values for your plots. 
+## Findings
+- The correlation between the latitude and the maximum temperature is strong to very strong because the r-value is less than –0.7 for the Northern Hemisphere and greater than 0.7 for the Southern Hemisphere, as shown by the plots here. This means that as we approach the equator, 0° latitude, the temperatures become warmer. And when we are further from the equator the temperatures become cooler.
+- The correlation between the latitude and percent humidity is very low because the r-value is less than 0.04 for the Northern and Southern Hemispheres for the plots shown here. This means that percent humidity is unpredictable due to changing weather patterns that can increase or decrease percent humidity. 
+- The correlation between the latitude and percent cloudiness is very low because the r-value is less than –0.09 for the Northern Hemisphere and less than –0.02 for the Southern Hemisphere for the plots shown here. This means that cloudiness is unpredictable due to changing weather patterns that can increase or decrease percent cloudiness. 
+- The correlation between the latitude and wind speed is very low because the r-value is less  than –0.07 for the Northern Hemisphere and less than –0.3 for the Southern Hemisphere for the plots shown here. This means that wind speed is unpredictable due to changing weather patterns that can increase or decrease wind speed.
