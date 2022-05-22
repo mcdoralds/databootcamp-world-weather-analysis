@@ -1,10 +1,10 @@
 # databootcamp_world_weather_analysis
 
 # Project Overview
-This project's purpose is to create a database of travel destinations and hotels to provide trip planning services for the user. The user inputs their preference of temperature, and our program will return a list of possible cities that fit that criteria as well as hotel recommendations for each city.
+This project's purpose is to create a database of travel destinations and hotels to provide trip planning services for the user. The user inputs their preference of temperature, and our program will return a list of possible cities that fit that criteria as well as hotel recommendations for each city. 
 
 ## Background
-Client (PlanMyTrip) would like to use our program to provide travelers and vactioners with a dynamic and customized experience.
+Client (PlanMyTrip) would like to use our program to provide travelers and vactioners with a dynamic and customized experience. 
 
 ## Objective
 Collect and analyze weather data across cities worldwide.
@@ -39,6 +39,8 @@ The analysis includes:
 
 - A deeper look into the correlations between the relationships listed above using regression analysis
 - A series of heatmaps using the Google Maps and Places API that showcases the relationships above.
+
+Also included are sample maps and itineraries to illustrate the extent to which our program can plan a trip for the customer using readily available information from the internet.
 
 ## Findings
 - The correlation between the latitude and the maximum temperature is strong to very strong because the r-value is less than –0.7 for the Northern Hemisphere and greater than 0.7 for the Southern Hemisphere, as shown by the plots here. This means that as we approach the equator, 0° latitude, the temperatures become warmer. And when we are further from the equator the temperatures become cooler.
